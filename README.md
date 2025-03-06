@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Interactive Learning Platform
 
-## Getting Started
+This project provides an intuitive, interactive interface for users to participate in coding challenges, track their progress, and engage with the community. Built using Next.js, the frontend is optimized for both performance and scalability with server-side rendering, ensuring a smooth user experience.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework:** Next.js (built on React)
+- **Styling:** CSS Modules / Styled Components (or your preferred CSS framework)
+- **State Management:** React Context API / Redux (as needed)
+- **Authentication:** JWT Token-based authentication for secure access
+- **API Communication:** RESTful APIs
+
+## Key Features
+
+### 1. Challenge Interface
+- **Interactive Viewer:** Browse challenges with real-time progress tracking.
+- **Syntax Highlighting:** Enhanced readability for coding challenges.
+- **Submission History:** View past attempts and feedback.
+- **Markdown Support:** Render rich text content in challenges.
+- **Integrated Code Editor:** Write and test code directly within the interface.
+
+### 2. User Dashboard
+- **Progress Overview:** Visual statistics to track ongoing and completed challenges.
+- **Achievement Badges:** Showcase milestones and rewards earned.
+- **Performance Analytics:** Detailed insights into personal progress and learning trends.
+
+### 3. Community Features
+- **Leaderboards:** Global and challenge-specific rankings to foster friendly competition.
+- **Discussion Sections:** Engage in conversations and share tips for each challenge.
+- **User Profiles:** Highlight achievements and allow social sharing.
+  
+## Installation & Setup
+
+Follow the steps below to set up the frontend locally:
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/pratee-k-umar/CreathonUI.git
+   cd client
+   ```
+
+2. **Install Dependencies:**
+
+   Ensure you have [Node.js](https://nodejs.org/) installed, then run:
+
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables:**
+
+   Create a `.env.local` file at the root of the project and add your configuration. For example:
+
+   ```env
+   NEXT_PUBLIC_API_URL=https://api.yourdomain.com
+   NEXT_PUBLIC_JWT_SECRET=your_jwt_secret_key
+   ```
+
+4. **Run the Development Server:**
+
+   Start the Next.js development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   The app should now be running on [http://localhost:3000](http://localhost:3000).
+
+## Production Build
+
+To create a production-ready build of the project:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The production server will start and serve optimized pages with server-side rendering.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## API Integration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The frontend communicates with a backend via RESTful API endpoints. Ensure that:
+- The API endpoints are correctly specified in your environment configuration.
+- JWT tokens are handled securely for user authentication.
+- You manage error handling and loading states effectively to improve user experience.
 
-## Learn More
+## Future Enhancements
 
-To learn more about Next.js, take a look at the following resources:
+- **Improved Real-Time Features:** Enhance interactivity with real-time notifications and updates.
+- **Mobile Optimization:** Further refine the UI/UX for mobile devices.
+- **Advanced Code Editor:** Integrate additional tools and plugins to improve coding challenge experiences.
+- **Localization:** Support multiple languages for a broader audience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please fork the repository, create a new branch for your feature or fix, and submit a pull request. Make sure your code adheres to the project’s style guidelines and includes relevant tests.
