@@ -1,4 +1,4 @@
-# Interactive Learning Platform
+# Creathon - Frontend
 
 This project provides an intuitive, interactive interface for users to participate in coding challenges, track their progress, and engage with the community. Built using Next.js, the frontend is optimized for both performance and scalability with server-side rendering, ensuring a smooth user experience.
 
