@@ -130,7 +130,7 @@ const Authentication = () => {
                 className={`transition-all duration-500 ease-in-out transform ${
                   activeTab === "register"
                     ? "translate-x-0 opacity-100"
-                    : "-translate-x-full opacity-0 absolute"
+                    : "-translate-x-full opacity-0"
                 }`}
               >
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">
