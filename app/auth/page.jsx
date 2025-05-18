@@ -1,15 +1,52 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Authentication = () => {
   const [activeTab, setActiveTab] = useState("login");
   const handleRegister = (e) => {
     e.preventDefault();
-  }
+  };
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-64px)]">
-      <div className="w-full max-w-4xl h-[468px] mx-auto  bg-white rounded-xl shadow-2xl overflow-hidden" id="card-conponent">
+      <div className="absolute w-full min-h-[calc(100vh-64px)] grid grid-cols-10 grid-rows-6 gap-4 p-4">
+        {Array.from({ length: 60 }).map((_, index) => (
+          <div
+            key={index}
+            className="p-2 rounded-md transition-all duration-200 hover:scale-106"
+            style={{
+              animation: `breath ${10 * 0.3}s linear infinite`,
+              animationDelay: `${(index % 10) * (1.2 / (10 + 1))}s`,
+            }}
+          />
+        ))}
+      </div>
+      <style>
+        {`
+          @keyframes breath {
+            0% {
+              background-color: #ffffff;
+              transform: scale(1);
+            }
+            25% {
+              background-color: #3949AB;
+              transform: scale(1.1);
+            }
+            50% {
+              background-color: #ffffff;
+              transform: scale(1);
+            }
+            100% {
+              background-color: #ffffff;
+              transform: scale(1);
+            }
+          }
+        `}
+      </style>
+      <div
+        className="w-full max-w-4xl h-[468px] mx-auto bg-white rounded-xl shadow-2xl overflow-hidden z-10"
+        id="card-conponent"
+      >
         <div className="flex flex-col md:flex-row h-full">
           <div className="w-full md:w-1/2 bg-indigo-600 p-8 text-white rounded-l-xl">
             <h2 className="text-3xl font-bold mb-6">
