@@ -7,6 +7,7 @@ const Authentication = () => {
   const handleRegister = (e) => {
     e.preventDefault();
   };
+  // const delay = col * delayBetweenSteps + Math.floor(index / cols) * (cols * delayBetweenSteps + wavePause);
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-64px)]">
       <div className="absolute w-full min-h-[calc(100vh-64px)] grid grid-cols-10 grid-rows-6 gap-4 p-4">
@@ -15,8 +16,7 @@ const Authentication = () => {
             key={index}
             className="p-2 rounded-md transition-all duration-200 hover:scale-106"
             style={{
-              animation: `breath ${10 * 0.3}s linear infinite`,
-              animationDelay: `${(index % 10) * (1.2 / (10 + 1))}s`,
+              animation: `breath 3s ease-in-out ${(index % 10) * (3 / (10 + 3))}s infinite`
             }}
           />
         ))}
@@ -24,22 +24,22 @@ const Authentication = () => {
       <style>
         {`
           @keyframes breath {
-            0% {
-              background-color: #ffffff;
-              transform: scale(1);
-            }
-            25% {
-              background-color: #3949AB;
-              transform: scale(1.1);
-            }
-            50% {
-              background-color: #ffffff;
-              transform: scale(1);
-            }
-            100% {
-              background-color: #ffffff;
-              transform: scale(1);
-            }
+            0%, 100% {
+            background-color: #ffffff;
+            transform: scale(1);
+          }
+          30% {
+            background-color: #ffffff;
+            transform: scale(1);
+          }
+          50% {
+            background-color: #3949AB;
+            transform: scale(1.07);
+          }
+          70% {
+            background-color: #ffffff;
+            transform: scale(1);
+          }
           }
         `}
       </style>
