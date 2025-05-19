@@ -7,7 +7,6 @@ const Authentication = () => {
   const handleRegister = (e) => {
     e.preventDefault();
   };
-  // const delay = col * delayBetweenSteps + Math.floor(index / cols) * (cols * delayBetweenSteps + wavePause);
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-64px)]">
       <div className="absolute w-full min-h-[calc(100vh-64px)] grid grid-cols-10 grid-rows-6 gap-4 p-4">

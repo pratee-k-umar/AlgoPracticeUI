@@ -1,4 +1,4 @@
-# Creathon - Frontend
+# AlgoPractice - Frontend
 
 This project provides an intuitive, interactive interface for users to participate in coding challenges, track their progress, and engage with the community. Built using Next.js, the frontend is optimized for both performance and scalability with server-side rendering, ensuring a smooth user experience.
 
@@ -36,7 +36,7 @@ Follow the steps below to set up the frontend locally:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/pratee-k-umar/CreathonUI.git
+   git clone https://github.com/pratee-k-umar/AlgoPracticeUI.git
    cd client
    ```
 
